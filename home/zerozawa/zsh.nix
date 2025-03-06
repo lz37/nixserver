@@ -17,6 +17,7 @@
       lt = "${pkgs.eza}/bin/eza --tree --level=2";
       llm = "${pkgs.eza}/bin/eza -lbGF --git --sort=modified";
       lld = "${pkgs.eza}/bin/eza -lbhHGmuSa --group-directories-first";
+      HISTFILE = "${config.xdg.dataHome}/zsh/history";
     };
     history = {
       size = 10000;
@@ -41,7 +42,13 @@
       enable = true;
       # Installations with additional options. For the list of options, please refer to Zplug README.
       plugins = [
-        { name = "romkatv/powerlevel10k"; tags = [ "as:theme" "depth:1" ]; }
+        {
+          name = "romkatv/powerlevel10k";
+          tags = [
+            "as:theme"
+            "depth:1"
+          ];
+        }
         { name = "fdellwing/zsh-bat"; }
         { name = "wbingli/zsh-wakatime"; }
         { name = "MichaelAquilina/zsh-you-should-use"; }
@@ -49,8 +56,7 @@
         { name = "nix-community/nix-zsh-completions"; }
       ];
     };
-    envExtra = ''
-    '';
+    envExtra = '''';
     initExtraFirst = ''
       (( ''${+commands[direnv]} )) && emulate zsh -c "$(direnv export zsh)"
       if [[ -r "${config.xdg.configHome}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then

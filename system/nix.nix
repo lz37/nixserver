@@ -16,18 +16,18 @@
         # ISCAS
         # "https://mirror.iscas.ac.cn/nix-channels/store"
         # 上交
-        "https://mirror.sjtu.edu.cn/nix-channels/store"
+        # "https://mirror.sjtu.edu.cn/nix-channels/store"
         # 南大
         # "https://mirror.nju.edu.cn/nix-channels/store"
-        pkgs.nur.repos.xddxdd._meta.garnixUrl
-        "https://nix-community.cachix.org?priority=100"
-        "https://devenv.cachix.org?priority=100"
+        pkgs.nur.repos.xddxdd._meta.atticUrl
+        # "https://nix-community.cachix.org?priority=100"
+        # "https://devenv.cachix.org?priority=100"
         "https://chaotic-nyx.cachix.org"
       ];
       trusted-public-keys = [
-        pkgs.nur.repos.xddxdd._meta.garnixPublicKey
-        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-        "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
+        pkgs.nur.repos.xddxdd._meta.atticPublicKey
+        # "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+        # "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
         "chaotic-nyx.cachix.org-1:HfnXSw4pj95iI/n17rIDy40agHj12WfF+Gqk6SonIT8="
       ];
       trusted-users = [

@@ -16,7 +16,7 @@
       enable = true;
       enableZshIntegration = true;
       config = {
-        whitelist.prefix = [ config.zerozawa.nixos.path.code ];
+        whitelist.prefix = [ config.zerozawa.nixos.path.codeSrc ];
       };
       nix-direnv.enable = true;
     };
@@ -30,6 +30,7 @@
       package = pkgs.gitAndTools.gitFull;
       userName = config.zerozawa.git.userName;
       userEmail = config.zerozawa.git.userEmail;
+      signing.format = "openpgp";
       extraConfig = {
         credential = {
           helper = "store";

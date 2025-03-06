@@ -9,6 +9,8 @@
       YARN_CACHE_FOLDER = "${ALL_PKG_STORE}/yarn/cache";
       YARN_GLOBAL_FOLDER = "${ALL_PKG_STORE}/yarn/global";
       npm_config_store_dir = "${ALL_PKG_STORE}/pnpm";
+      GOPATH = "${ALL_PKG_STORE}/golang";
+      GOPROXY = "https://goproxy.cn,direct";
     };
   };
 }
