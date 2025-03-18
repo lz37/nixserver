@@ -11,6 +11,8 @@
       substituters = [
         # 中科大
         "https://mirrors.ustc.edu.cn/nix-channels/store"
+        # 清华
+        "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
         # 北外
         # "https://mirrors.bfsu.edu.cn/nix-channels/store"
         # ISCAS

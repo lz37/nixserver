@@ -10,5 +10,11 @@
     git
     busybox
     gcc
+    rar
+    unar
+    zip
+    unzip
+    p7zip
+    sox
   ];
 }

@@ -1,6 +1,25 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    gvfs
+    xarchiver
+  ];
+  programs = {
+    firefox = {
+      enable = true;
+      languagePacks = [ "zh-CN" ];
+    };
+    thunar = {
+      enable = true;
+      plugins = with pkgs.xfce; [
+        thunar-archive-plugin
+        thunar-volman
+        thunar-dropbox-plugin
+        thunar-media-tags-plugin
+      ];
+    };
+  };
   services = {
     xserver = {
       enable = true;
@@ -13,10 +32,10 @@
         };
       };
     };
-    rdp = {
+    xrdp = {
       enable = true;
       audio.enable = true;
-      # defaultWindowManager
+      defaultWindowManager = "xfce4-session";
     };
   };
 }

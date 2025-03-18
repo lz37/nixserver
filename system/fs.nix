@@ -23,5 +23,10 @@
         device = config.zerozawa.nixos.blk.code;
         fsType = "ext4";
       };
+      "${config.zerozawa.nixos.path.media}" = {
+        device = config.zerozawa.servers.truenas.devices.media;
+        fsType = samba-fsType;
+        options = samba-options;
+      };
     };
 }
