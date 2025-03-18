@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   environment = {
@@ -11,6 +11,10 @@
       npm_config_store_dir = "${ALL_PKG_STORE}/pnpm";
       GOPATH = "${ALL_PKG_STORE}/golang";
       GOPROXY = "https://goproxy.cn,direct";
+      BUN_INSTALL = "${ALL_PKG_STORE}/bun";
+      DENO_DIR = "${ALL_PKG_STORE}/deno/cache";
+      DENO_INSTALL_ROOT = "${ALL_PKG_STORE}/deno/bin";
+      LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
     };
   };
 }

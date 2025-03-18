@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }:
@@ -10,5 +9,6 @@
     wget
     git
     busybox
+    gcc
   ];
 }

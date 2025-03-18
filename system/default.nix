@@ -18,6 +18,7 @@
     ./chaotic.nix
     ./kernel.nix
     ./variables.nix
+    ./xfce.nix
     ./packages
   ];
   system.stateVersion = config.zerozawa.nixos.version;
