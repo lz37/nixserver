@@ -15,6 +15,10 @@
     zip
     unzip
     p7zip
+    # audio
     sox
+    shntool
+    bchunk
+    cuetools
   ];
 }

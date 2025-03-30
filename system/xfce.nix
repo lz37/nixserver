@@ -4,11 +4,11 @@
   environment.systemPackages = with pkgs; [
     gvfs
     xarchiver
+    flacon
   ];
   programs = {
-    firefox = {
+    chromium = {
       enable = true;
-      languagePacks = [ "zh-CN" ];
     };
     thunar = {
       enable = true;
