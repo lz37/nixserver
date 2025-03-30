@@ -5,6 +5,7 @@
     gvfs
     xarchiver
     flacon
+    chromium
   ];
   programs = {
     chromium = {
